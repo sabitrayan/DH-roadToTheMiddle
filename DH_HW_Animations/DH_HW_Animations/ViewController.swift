@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     private var redLayer = CAShapeLayer()
 
     func setupLayer(){
-        let whiteRect = CGRect(x: 0, y: 200, width: 410, height: 50)
+        let whiteRect = CGRect(x: 0, y: 200, width: view.bounds.width, height: 50)
         whiteLayer.path = UIBezierPath(roundedRect: whiteRect, cornerRadius: 10).cgPath
         whiteLayer.fillColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         view.layer.addSublayer(whiteLayer)
 
-        let redRect = CGRect(x: -410, y: 200, width: 410, height: 50)
+        let redRect = CGRect(x: -view.bounds.width, y: 200, width: view.bounds.width, height: 50)
         redLayer.path = UIBezierPath(roundedRect: redRect, cornerRadius: 10).cgPath
         redLayer.fillColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
         view.layer.addSublayer(redLayer)
